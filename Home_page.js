@@ -347,16 +347,20 @@ function showPaymentForm() {
     var emptyMessage = document.querySelector('.basket_table table tr td[colspan="3"]');
     if (!emptyMessage) {
         var wrapper = document.querySelector('.wrapper');
+        var basket = document.querySelector('.basket_table');
         wrapper.style.display = 'block';
+        basket.style.display = 'none';
     } else {
         alert("Your basket is empty. Please add items before proceeding to payment.");
     }
 }
 function validatePayment() {
+
     var cardHolder = document.getElementById("cardHolder").value.trim();
     var cardNumber = document.getElementById("cardNumber").value.trim();
     var expiryDate = document.getElementById("expiryDate").value.trim();
     var cvc = document.getElementById("cvc").value.trim();
+
 
     if (cardHolder === "" || cardNumber === "" || expiryDate === "" || cvc === "") {
       alert("Please fill in all fields.");
@@ -396,3 +400,11 @@ function validatePayment() {
 }
 
 
+function closePaymentForm() {
+    // Hide the payment form by setting its display style to 'none'
+    var payment=document.querySelector('.wrapper')
+    payment.style.display = 'none';
+    var basket = document.querySelector('.basket_table');
+    basket.style.display = 'block';
+
+}

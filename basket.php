@@ -65,80 +65,115 @@ $result = $stmt->get_result();
             <h1>Your Shopping Basket</h1>
         </div>
         <div class="basket_table">
-        <table>
-            <thead>
-                <tr><th>Item</th><th>Quantity</th><th>Price</th></tr>
-            </thead>
+ <table id="basket">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td><?= htmlspecialchars($row['name']) ?></td>
+            <td>
+                <select name="quantity" class="quantity">
+                    <option value="0">0</option>
+                    <?php for ($i = 1; $i <= 10; $i++): ?>
+                        <option value="<?= $i ?>" <?= $i == $row['quantity'] ? 'selected' : '' ?>><?= $i ?></option>
+                    <?php endfor; ?>
+                </select>
+            </td>
+            <td class="price">$<span class="item-price" data-price="<?= $row['price'] * $row['quantity'] ?>"><?= number_format($row['price'] * $row['quantity'], 2) ?></span></td>
+        </tr>
+        <?php 
+            // Calculate total price
+            $totalPrice += $row['price'] * $row['quantity'];
+        ?>
+        <?php endwhile; ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2"></td>
+            <td>Total: $<span id="total"><?= number_format($totalPrice, 2) ?></span></td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    // Update total price and remove item when quantity changes
+    document.querySelectorAll('.quantity').forEach(function(element) {
+        element.addEventListener('change', function() {
+            var itemPriceElement = this.parentElement.nextElementSibling.querySelector('.item-price');
+            var totalPriceElement = document.getElementById('total');
+            var payButton = document.getElementById('payButton');
             
-<?php
-$totalPrice = 0;
+            // Calculate new item price
+            var price = parseFloat(itemPriceElement.dataset.price) / parseInt(itemPriceElement.parentElement.previousElementSibling.querySelector('.quantity').value);
+            var quantity = parseInt(this.value);
+            var newItemPrice = price * quantity;
+            itemPriceElement.innerText = newItemPrice.toFixed(2);
+            itemPriceElement.setAttribute('data-price', newItemPrice);
 
-if ($result->num_rows > 0) {
-    echo '<table>';
-    while ($row = $result->fetch_assoc()) {
-        // Insert a row for each item
-        echo "<tr><td>" . htmlspecialchars($row['name']) . "</td>"
-            . "<td>" . intval($row['quantity']) . "</td>"
-            . "<td>$" . number_format($row['price'], 2) . "</td></tr>";
-        
-        $totalPrice += $row['price'] * $row['quantity'];
-    }
-    echo '</table>';
+            // Calculate total price
+            var total = 0;
+            document.querySelectorAll('.item-price').forEach(function(itemPrice) {
+                total += parseFloat(itemPrice.getAttribute('data-price'));
+            });
+            totalPriceElement.innerText = total.toFixed(2);
+            payButton.innerText = "Pay $" + totalPriceElement.innerText;
+            
+            // Remove item if quantity is 0
+            if (quantity === 0) {
+                var itemRow = this.closest('tr');
+                itemRow.remove();
+            }
+        });
+    });
+</script>
 
-} else {
-    // Show modal if basket is empty
-    echo '<tr><td colspan="3"style="text-align: center;width=100%;"><strong>Your basket is empty </strong></td></tr>';
-}
-
-
-echo '<tr><td colspan="2"></td><td colspan="1"style="text-align: center;width=100%;border: solid;border-color: white;"><strong>Total  :     </strong>$' . number_format($totalPrice, 2) . '</td></tr>';
-?>
-
-          
-        </table>
-        <div style="justify-content: center;display: flex;">
-        <a><button class='place_order_button' onclick="showPaymentForm()"><strong>Place Order</strong></button></a>
-        </div>
-
-        </div>
-
-    </div>
-
-    <div class="wrapper">
-  <div class="payment">
-    <div class="payment-logo">
-      <img src="Images/logo.png">
-    </div>
-    
-    
-<div class="form">
-  <div class="space icon-relative">
-    <label class="label">Card holder:</label>
-    <input id="cardHolder" type="text" class="payment-input" placeholder="CardHolder Name">
-    <i class="fas fa-user"></i>
-  </div>
-  <div class="space icon-relative">
-    <label class="label">Card number:</label>
-    <input id="cardNumber" type="text" class="payment-input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
-    <i class="far fa-credit-card"></i>
-  </div>
-  <div class="card-grp space">
-    <div class="card-item icon-relative">
-      <label class="label">Expiry date:</label>
-      <input id="expiryDate" type="text" name="expiry-data" class="payment-input" data-mask="00/00"  placeholder="00/00">
-      <i class="far fa-calendar-alt"></i>
-    </div>
-    <div class="card-item icon-relative">
-      <label class="label">CVC:</label>
-      <input id="cvc" type="text" class="payment-input" data-mask="000" placeholder="000">
-      <i class="fas fa-lock"></i>
-    </div>
-  </div>
-  <div class="btn">
-    <button id="payButton" class="btn" onclick="validatePayment()">Pay</button>
-  </div> 
+<div style="justify-content: center;display: flex;">
+    <a><button class='place_order_button' onclick="showPaymentForm()"><strong>Place Order</strong></button></a>
 </div>
 
+<div class="wrapper">
+    <div class="payment">
+        <div class="payment-logo">
+            <img src="Images/logo.png">
+        </div>
+
+        <div class="form">
+            <div class="space icon-relative">
+                <label class="label">Card holder:</label>
+                <input id="cardHolder" type="text" class="payment-input" placeholder="CardHolder Name">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="space icon-relative">
+                <label class="label">Card number:</label>
+                <input id="cardNumber" type="text" class="payment-input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+                <i class="far fa-credit-card"></i>
+            </div>
+            <div class="card-grp space">
+                <div class="card-item icon-relative">
+                    <label class="label">Expiry date:</label>
+                    <input id="expiryDate" type="text" name="expiry-data" class="payment-input" data-mask="00/00"  placeholder="00/00">
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <div class="card-item icon-relative">
+                    <label class="label">CVC:</label>
+                    <input id="cvc" type="text" class="payment-input" data-mask="000" placeholder="000">
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+            <div class="btn">
+                <button id="payButton" class="btn" onclick="validatePayment()">Pay $<?= number_format($totalPrice, 2) ?></button>
+                <br>
+                <button id="closeButton" class="btn" onclick="closePaymentForm()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
@@ -153,8 +188,8 @@ echo '<tr><td colspan="2"></td><td colspan="1"style="text-align: center;width=10
                 <a href="TOS.html"class="Footer_Links"><li>Delivery Information</li></a>
                 <a href="TOS.html"class="Footer_Links"><li>Customer Service</li></a>
                 <a href="TOS.html"class="Footer_Links"><li>Return Policy</li></a>
-                <a href="TOS.html"class="Footer_Links"><li>Contact Us</li></a>
-                <a href="TOS.html"class="Footer_Links"><li>FAQs</li></a>
+                <a href="ContactPage.php"class="Footer_Links"><li>Contact Us</li></a>
+                <a href="FaqsPage.php"class="Footer_Links"><li>FAQs</li></a>
                 </ul>
 
                 <ul><h2>About Us</h2>
@@ -190,7 +225,7 @@ echo '<tr><td colspan="2"></td><td colspan="1"style="text-align: center;width=10
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="Home_Page.js"></script> 
+    <script src="Home_page.js"></script> 
 
 </body>
 </html>
