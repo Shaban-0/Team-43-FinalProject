@@ -76,7 +76,7 @@
         <div class="TOS_container">
             <h2>About Us</h2>
             <ul>
-                <li>Founded in 1666, Le Paradis Company is a family-owned business dedicated to providing customers with high-quality products and exceptional service.</li>
+                <li>Founded in 2023, Le Paradis Company is a family-owned business dedicated to providing customers with high-quality products and exceptional service.</li>
                 <li>Our mission is to exceed customer expectations by offering innovative solutions, superior quality, and unparalleled customer support.</li>
                 <li>With a commitment to excellence and integrity, we strive to build long-lasting relationships with our customers and partners.</li>
             </ul>
@@ -105,7 +105,7 @@
             <ul>
                 <li>Calling all students! Enjoy exclusive savings with our student discount program.</li>
                 <li>Simply verify your student status with a valid student ID or .edu email address to receive a special discount on your next purchase.</li>
-                <li>Don't miss out on these extra savings – shop now and save on your favorite products!</li>
+                <li>Don't miss out on these extra savings – shop now and save on your favorite perfumes!</li>
             </ul>
         </div>
 
