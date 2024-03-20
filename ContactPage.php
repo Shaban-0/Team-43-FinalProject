@@ -41,7 +41,7 @@
 
 	
 	<H1>Contact Us</H1>
-	<form id="myForm" onsubmit="return validateForm()">
+	<form id="contactForm" method="post" onsubmit="return validateForm()">
 		<h2>Contact Form</h2>
 		<label for="fname">First Name</label>
 		<input type="text" id="fname" name="firstname" placeholder="Your first name.." class="text-input1">
@@ -51,7 +51,8 @@
 		<input type="text" id="email" name="email" placeholder="Your Email Address..." class="text-input1">
 		<label for="subject">How Can We Help You?</label>
 		<textarea id="subject" name="subject" placeholder="Write something.." rows="10" cols="10" class="text-input1"></textarea>
-		<input type="submit" value="Submit" class="submit-button">
+		<input id="submit-button" type="submit" value="Submit" class="submit-button">
+		<input type="hidden" name="submitted" value="true"/>
 	</form>
 	<div class="contact-box">
 		<h3>GET IN TOUCH WITH US</h3>
@@ -118,6 +119,88 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#contactForm").submit(function(event) {
+				let submit = document.getElementById("submit-button");
+				let message = ''
+				let form = document.getElementById("contactForm");
+				let fname = form.firstname.value;
+				let lname = form.lastname.value;
+				let email = form.email.value;
+				let subject = form.subject.value;
+				message += "Hi "  + fname + " "+ lname + " thank you for contacting us." + "\n" + 
+					"Email: " + email + "\n" + "We have recieved your message: " + subject;
+				alert(message);
+			});
+		});
+	</script>
+
 <script src="Home_Page.js"></script>
 </body>
 </html>
+
+<?php
+session_start();
+include 'db_connect.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+
+$errors = [];
+if (isset($_POST['submitted'])) {
+	$firstname = trim($_POST["firstname"]);
+	if (empty($firstname)){
+		$errors[] = "Firstname required";
+	}
+
+	$lastname = trim($_POST["lastname"]);
+	if (empty($lastname)){
+		$errors[] = "Lastname required";
+	}
+
+	$email = trim($_POST["email"]);
+	if (empty($email)){
+		$errors[] = "Email required";
+	}
+
+	$message = trim($_POST["subject"]);
+	if (empty($message)){
+		$errors[] = "Message required";
+	}
+
+}
+if (!empty($errors)){
+	$name = $firstname . ' ' . $lastname;
+	$recipient = "laparadis43@gmail.com"; 
+	$subject = "New message from website";
+	$body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+	$mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail->isSMTP();
+	$mail->Host = 'smtp.gmail.com';
+	$mail ->SMTPAuth = true;
+	$mail->Username = 'laparadis43@gmail.com';
+    $mail->Password = 'Team43_$';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587; 
+	
+	$mail->setFrom('laparadis43@gmail.com', 'Website contact us page');
+    $mail->addAddress($recipient); 
+    $mail->Subject = $subject;
+    $mail->Body = $body;
+
+
+    if ($mail->send()){
+        echo "Email sent successfully";
+    }else{
+        echo "Failed to send email";
+    }
+} else {
+	foreach ($errors as $error) {
+		echo $error . "<br>";
+	}
+}
+
+?>
