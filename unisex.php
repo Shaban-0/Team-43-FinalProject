@@ -58,10 +58,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <a href="giftsets.php" class="Link_Button" id="nav_button5"><button class="nav_btn"><b>Gift Sets</b></button></a>
 		</div>
 		<div class="flex_search_bar_container">
+        <form id="searchForm" action="search.php" method="post" >
     		<div class="search_bar">
-				<input type="text" placeholder="Search..."> <!-- Search bar -->
-				<button class="search_button"><b>Search</b></button> <!-- Search button -->
-    		</div>
+				<input type="text" name="query" placeholder="Search..."> <!-- Search bar -->
+				<button type="submit" class="search_button"><b>Search</b></button> <!-- Search button -->
+                <input type="hidden" name="submitted" value="true"/>
+            </div>
+        </form>
 		</div>
 	</nav>
 
@@ -142,6 +145,32 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 console.error("An error occurred: " + error);
             }
         });
+
+    //event listner for search form submission
+    $(document).ready(function(){
+        $("#searchForm").submit(function(event) {
+            event.preventDefault();
+            var query = $(this).find("input[name='query']").val();
+            //AJAX request - submit search query
+            $.ajax({
+                url: 'search.php',
+                type: 'POST',
+                data: { submitted: true, query: query},
+                success:function(response) {
+                    if(response.status === 'success'){
+                        $('#menProductsCarousel').empty();
+                        console.log(response.products);
+                        populateCarousel(response.products);
+                    } else{
+                        console.error('Error: ' + response.message);
+                    }   
+                },
+                error: function(xhr, status, error) {
+                    console.error("An error occured: " +error);
+                }
+            });
+        });
+    });
 
        
     // Function to populate the carousel with items
