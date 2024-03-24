@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style/HomePageCSS.css">
+    <link rel="stylesheet" href="../style/cards.css">
+	<title>Unisex</title>
+</head>
+<body>
+	<header>
+        <div  class="flex-container1" id="logo_div">
+            <img class="logo-transition" id="logo" src="../logo.png"> 
+        </div>
+	</header>
+
+	<nav>
+		<div class="flex-container2"  id="nav_div">		
+			<a href = "../HomePage.html" class="Link_Button"><button class="dropbtn">Men</button></a>
+			<a href = "./women.html" class="Link_Button"><button class="dropbtn" >Women</button></a>
+  			<a href = "#" class="Link_Button"><button class="dropbtn" >Unisex</button></a>
+  			<a href = "#" class="Link_Button"><button class="dropbtn" >Sale</button></a>
+  			<a href = "#" class="Link_Button"><button class="dropbtn" >Gift Sets</button></a>
+  		</div>
+	</nav>
+
+	<div class="cards-wrapper">
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/unisex/Picture1.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>L'Essence Mystique</h2>
+					<p>(The Mystical Essence): A captivating and enigmatic aroma that transcends gender, reminiscent of Tom Ford Black Orchid.</p>
+					<div class="tags unisex">
+						<div class="tag">Unisex</div>
+						<div class="tag">Winter</div>
+						<div class="tag">Brown</div>
+						<div class="tag">250ml</div>
+					</div>
+				</div>
+				<p class="price unisex">49.99£</p>
+			</div>
+		</div>
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/unisex/Picture2.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>Le Parfum Infini</h2>
+					<p>(The Infinite Perfume): A timeless and unisex fragrance that embodies the essence of "Le Paradis."</p>
+					<div class="tags unisex">
+						<div class="tag">Unisex</div>
+						<div class="tag">Winter</div>
+						<div class="tag">Gold</div>
+						<div class="tag">150ml</div>
+					</div>
+				</div>
+				<p class="price unisex">49.00£</p>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+	    document.getElementById("logo_div").style.padding ="10px 5px";
+	    document.getElementById("nav_div").style.padding ="0px 0px";
+	    document.getElementById("logo").style.width ="0%";
+	    document.getElementById("logo").style.height ="0%";
+
+
+
+	  } else {
+	    document.getElementById("logo_div").style.padding = "50px 10px";
+	    document.getElementById("nav_div").style.padding ="1%";
+	    document.getElementById("logo").style.width ="200px";
+	    document.getElementById("logo").style.height ="200px";
+	  }
+	}
+	</script>
+	<script>
+		var slideIndex = 1;
+		S_Slide(slideIndex);
+
+		function nextSlides(n) {
+		  S_Slide(slideIndex += n);
+		}
+
+		function C_Slide(n) {
+		  S_Slide(slideIndex = n);
+		}
+
+		function S_Slide(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("Slide");
+		  
+		  if (n > slides.length) {
+		  slideIndex = 1
+		  }    
+		  if (n < 1) {
+		  slideIndex = slides.length
+		  }
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+
+		  slides[slideIndex-1].style.display = "block"; 
+		  setTimeout(showSlides, 2000); 
+		}
+
+	</script>
+
+
+</body>
+</html> 

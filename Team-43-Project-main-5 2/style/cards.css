@@ -1,0 +1,138 @@
+
+.cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch; 
+}
+
+
+.card-outline {
+    flex: 0 0 25%;
+    padding: 5px;
+    align-items: stretch; 
+    
+}
+
+.card {
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: stretch; 
+
+}
+
+.card h2{
+    font-size: 16px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.card-info {
+    margin-top: 15px;
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.card-info p{
+    font-size: 14px;
+}
+
+.tags {
+    margin: 15px 0px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.tags .tag {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.tags.men .tag {
+    background-color: lightblue;
+}
+
+.tags.women .tag {
+    background-color: lightpink;
+}
+
+.tags.unisex .tag {
+    background-color: lightgray;
+}
+
+.price{
+    text-align: right;
+    margin: 0;
+    margin-top: auto;
+    font-weight: 700;
+}
+
+.price.men{
+    color: lightskyblue;
+}
+
+.price.women{
+    color: palevioletred;
+}
+
+.price.unisex{
+    color: gray;
+}
+
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* Styles for phones go here */
+    .card-outline {
+        flex: 0 0 100%;
+    }
+}
+
+  /* Small devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styles for tablets go here */
+    .card-outline {
+        flex: 0 0 50%;
+    }
+}
+
+/* Medium devices (laptops) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for laptops go here */
+    .card-outline {
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 1025px) {
+    /* Styles for desktops go here */
+    .card-outline {
+        flex: 0 0 25%;
+    }
+}
+
+/* Extra large devices (large desktops or wide screens) */
+@media only screen and (min-width: 1200px) {
+    /* Styles for large desktops go here */
+    .card-outline {
+        flex: 0 0 20%;
+    }
+}

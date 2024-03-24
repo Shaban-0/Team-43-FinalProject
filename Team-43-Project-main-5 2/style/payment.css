@@ -1,0 +1,156 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.container.header {
+    margin-top: 3rem;
+}
+
+.container.header h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}
+
+.card-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEEEEE;
+}
+
+.centered-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-border {
+    flex: 0 0 auto;
+    width: 40%;
+}
+
+.card-content {
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #DDDDDD;
+    padding: 30px;
+    border: none;
+}
+
+.card-body {
+    flex: 1 1 auto;
+
+}
+
+.field-row {
+    margin-bottom: 1.5rem;
+}
+
+.two-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-button-field {
+    text-align: center;
+}
+
+.submit-button-field button{
+    border-radius: .5rem;
+    border: unset;
+    cursor: pointer;
+
+}
+
+.form-field {
+    display: block;
+    width: 100%;
+    border: unset;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+body {
+    background-color: #EEEEEE;
+    color: #76885B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEEEEE;
+}
+
+.payment-title h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #627254;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #DDDDDD;
+    padding: 30px;
+    border: none;
+}
+
+.form-label {
+    display: inline-block;
+    color: #76885B;
+    margin-bottom: .5rem;
+}
+
+.btn-info {
+    background-color: #627254;
+    border-color: #627254;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: #EEEEEE;
+}
+
+.btn-info:hover {
+    background-color: #76885B;
+    border-color: #76885B;
+    color: #EEEEEE;
+
+}
+
+@media only screen and (min-width: 1285px) {
+    .card-border {
+        width: 33.3%;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .card-border {
+        width: 66.6%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-border {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    .two-fields > div {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}

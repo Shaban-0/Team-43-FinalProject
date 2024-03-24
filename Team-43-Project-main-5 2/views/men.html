@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style/HomePageCSS.css">
+	<link rel="stylesheet" href="../style/cards.css">
+	<title>Women</title>
+</head>
+
+<body>
+	<header>
+		<div class="flex-container1" id="logo_div">
+			<img class="logo-transition" id="logo" src="../logo.png">
+		</div>
+	</header>
+
+	<nav>
+		<div class="flex-container2" id="nav_div">
+			<a href="./men.html" class="Link_Button"><button class="dropbtn">Men</button></a>
+			<a href="#" class="Link_Button"><button class="dropbtn">Women</button></a>
+			<a href="./unisex.html" class="Link_Button"><button class="dropbtn">Unisex</button></a>
+			<a href="#" class="Link_Button"><button class="dropbtn">Sale</button></a>
+			<a href="#" class="Link_Button"><button class="dropbtn">Gift Sets</button></a>
+		</div>
+	</nav>
+
+	<div class="cards-wrapper">
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/men/Picture1.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>L'Explorateur Aventureux</h2>
+					<p>(The Adventurous Explorer): A fresh and invigorating scent with citrus and aquatic elements, A
+						scent
+						for daily occasions. </p>
+					<div class="tags men">
+						<div class="tag">Man</div>
+						<div class="tag">Summer</div>
+						<div class="tag">Blue</div>
+						<div class="tag">200ml</div>
+					</div>
+				</div>
+				<p class="price men">19.99£</p>
+			</div>
+		</div>
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/men/Picture2.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>Le Noble Gentilhomme</h2>
+					<p>(The Noble Gentleman): A sophisticated and classic cologne with herbal and aromatic undertones,
+						akin
+						to Creed Aventus. </p>
+					<div class="tags men">
+						<div class="tag">Man</div>
+						<div class="tag">Winter</div>
+						<div class="tag">Yellow</div>
+						<div class="tag">200ml</div>
+					</div>
+				</div>
+				<p class="price men">39.99£</p>
+			</div>
+		</div>
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/men/Picture3.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>Le Magnifique Cuir</h2>
+					<p>(The Magnificent Leather): A rich and leathery aroma, evoking the essence of Tom Ford Tuscan
+						Leather.
+					</p>
+					<div class="tags men">
+						<div class="tag">Man</div>
+						<div class="tag">Winter</div>
+						<div class="tag">Black</div>
+						<div class="tag">250ml</div>
+					</div>
+				</div>
+				<p class="price men">29.99£</p>
+			</div>
+		</div>
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/men/Picture4.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>L'Élégant Mystère</h2>
+					<p>(The Elegant Mystery): A masculine fragrance with woody and spicy notes, reminiscent of Dior
+						Sauvage.
+					</p>
+					<div class="tags men">
+						<div class="tag">Man</div>
+						<div class="tag">Summer</div>
+						<div class="tag">Blue</div>
+						<div class="tag">Yellow</div>
+						<div class="tag">100ml</div>
+					</div>
+				</div>
+				<p class="price men">20.99£</p>
+			</div>
+		</div>
+
+		<div class="card-outline">
+			<div class="card">
+				<img src="../assets/men/Picture5.jpg" alt="Product Image">
+				<div class="card-info">
+					<h2>L'Énigmatique Bois</h2>
+					<p>(The Enigmatic Wood): An enigmatic blend of dark woods and oriental spices, reminiscent of Terre
+						d'Hermès.</p>
+					<div class="tags men">
+						<div class="tag">Man</div>
+						<div class="tag">Winter</div>
+						<div class="tag">Brown</div>
+						<div class="tag">100ml</div>
+					</div>
+				</div>
+				<p class="price men">19.99£</p>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		window.onscroll = function () { scrollFunction() };
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				document.getElementById("logo_div").style.padding = "10px 5px";
+				document.getElementById("nav_div").style.padding = "0px 0px";
+				document.getElementById("logo").style.width = "0%";
+				document.getElementById("logo").style.height = "0%";
+
+
+
+			} else {
+				document.getElementById("logo_div").style.padding = "50px 10px";
+				document.getElementById("nav_div").style.padding = "1%";
+				document.getElementById("logo").style.width = "200px";
+				document.getElementById("logo").style.height = "200px";
+			}
+		}
+	</script>
+	<script>
+		var slideIndex = 1;
+		S_Slide(slideIndex);
+
+		function nextSlides(n) {
+			S_Slide(slideIndex += n);
+		}
+
+		function C_Slide(n) {
+			S_Slide(slideIndex = n);
+		}
+
+		function S_Slide(n) {
+			var i;
+			var slides = document.getElementsByClassName("Slide");
+
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+
+			slides[slideIndex - 1].style.display = "block";
+			setTimeout(showSlides, 2000);
+		}
+
+	</script>
+
+
+</body>
+
+</html>

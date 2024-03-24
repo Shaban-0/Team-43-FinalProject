@@ -1,0 +1,54 @@
+body {
+  background-color: #EEEEEE; /* Background color */
+  font-family: 'Roboto', sans-serif; /* Font family */
+  font-size: 16px; /* Font size */
+  color: #76885B; /* Text color */
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #DDDDDD; /* Card background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #627254; /* Button background color */
+  color: #FFFFFF; /* Button text color */
+}
+
+button:hover {
+  background-color: #76885B; /* Button background color on hover */
+}
