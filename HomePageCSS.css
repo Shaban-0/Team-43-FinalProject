@@ -376,7 +376,7 @@
   color: white;
   border-radius: 25px;
   font-family:courier ;
-  top: 20px:;
+  top: 20px;
   left: 10px;
   padding-left: 10px;
   font-size: 2vh;
@@ -611,9 +611,9 @@ input[type="text"] {
 
 }
 
-li,{
+li{
   /* Styling for the footer */
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -1529,3 +1529,156 @@ margin-right: 15px;
   outline: none; /* Remove default focus outline */
   border-color: #66afe9; /* Change border color when focused */
 }
+
+/*/////////////////////////////////////////////////////////////////*/
+/* Styling for Your Profile page */
+.account-page {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.account-page h2 {
+  margin-top: 0;
+  color: #444;
+}
+
+.account-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.account-navigation button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.2s;
+}
+
+/* Hover effect for buttons on My Account page */
+.account-navigation button:hover {
+  background-color: #b1b1b1;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+/* Styling for Your Orders page */
+.sidebar {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.orders-content {
+  flex: 3;
+  padding: 20px;
+}
+
+.delivery-truck {
+  width: 100px;
+  display: block;
+  margin: 20px auto;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  list-style: none;
+}
+
+.timeline-step {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: black;
+  border: 2px solid transparent;
+}
+
+.timeline-step.completed {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #396;
+}
+
+.timeline-step.current {
+  background-color: #9b9b9b;
+  color: white;
+  border: 2px solid #575757;
+}
+
+.action-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #f7f7f7;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table, .orders-table th, .orders-table td {
+  border: 1px solid #ddd;
+}
+
+.orders-table th, .orders-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.view-more {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
+/* Styling for Login & Security page */
+.LoginSec-content {
+  flex: 3;
+  padding: 20px;
+}
+
+.LoginSec-details p {
+  margin: 10px 0;
+}
+
+.LoginSec-details button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+/*/////////////////////////////////////////////////////////////////*/
