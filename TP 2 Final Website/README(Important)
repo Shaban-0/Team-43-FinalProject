@@ -1,0 +1,16 @@
+User Login Credentials
+
+username:rehanmumtaz39
+password: laparadis123
+
+User can also register in the login/registration modal
+
+Admin Login Credentials
+
+username: rehansethi39
+password: 12345 
+
+One can also register using admin credentials but they have to use the special code for LA PARADIS,
+which is 
+"LP212120"
+in the admin_registration form.
