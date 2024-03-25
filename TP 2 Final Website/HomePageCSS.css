@@ -1,0 +1,1386 @@
+* {
+      box-sizing: border-box;
+    }
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*Heading Styling*/
+.flex_logo_container {
+  /*Flex container for the logo*/
+  display: flex;
+  justify-content: center;
+  background-color: rgb(4,4,4);
+  transition: 1.0s;
+  padding: 10px 10px;
+}
+
+.logo_transition{
+   /* Logo transition effect */
+  transition: 0.5s;
+  width: 20%;
+  height: 20%;
+}
+
+.basket_button{
+   /* Styling for header buttons and icons */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+
+}
+
+/* Logout button */
+.logout_button {
+  right: 60px; /* Adjust this value to move the logout button to the left */
+}
+
+/* Profile button */
+.profile_button {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000; /* Add a high z-index to ensure visibility */
+}
+
+.login_button{
+   /* Styling for header buttons and icons */
+  position: absolute;
+  top: 10px;
+  right: 80px;
+
+  width: 50px;
+  height: 50px;
+  
+}
+
+.header_icon {
+   /* Styling for header buttons and icons */
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/* Left Section Styling */
+.section_left_container{
+   /* Container for the left section */
+  display: flex;
+  justify-content: center;
+  transition-duration: 1.0s;
+  margin: 10px;
+  height: 60vh;
+  background-color: black;
+  float: left;
+  width: 27.5vw;
+  font-family: courier;
+  font-size: 2vw;
+  border:none ;
+  border-style: none;
+}
+
+.section_left_container_text{
+  /* Text styling for the left section */
+  padding: 10%;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  color: white;
+  transition-duration: 1.0s;
+  height: 100%;
+}
+
+.section_left_button{
+  /* Button styling for the left section */
+  width: 20vw;
+  height: 10vh;
+  padding: 5%;
+  cursor: pointer;
+  transition-duration: 1.0s;
+  background-color: black;
+  color: white;
+  border: 6px white ;
+  border-style: double;
+  font-size: 3vh;
+  font-family: courier;
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+ /* Right Section Styling */
+.section_right_container{
+  /* Container for the right section */
+  display: flex;
+  justify-content: center;
+  transition-duration: 1.0s;
+  margin: 10px;
+  height: 60vh;
+  background-color: black;
+  float: right;
+  width: 27.5vw;
+  font-family: courier;
+  font-size: 2vw;
+  border:none ;
+  border-style: none;
+}
+
+.section_right_container_text{
+  /* Text styling for the right section */
+  padding: 10%;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  color: white;
+  transition-duration: 1.0s;
+
+}
+.section_right_button{
+  /* Button styling for the right section */
+  width: 20vw;
+  height: 10vh;
+  padding: 5%;
+  cursor: pointer;
+  transition-duration: 1.0s;
+  background-color: black;
+  color: white;
+  border: 6px white ;
+  border-style: double;
+  font-size: 3vh;
+  font-family: courier;
+
+
+}
+
+
+.fade-in-section { 
+  animation: fadeIn 5s; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/* Middle Section Styling */
+.section_middle_container{
+  /* Container for the middle section */
+  display: flex;
+  justify-content: center;
+  background-color: darkgrey;
+  height: 8vh;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.section_middle_container_text{
+  /* Text styling for the middle section */
+  font-size: 0.95vw;
+  color: black;
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/* Navigation Styling */
+.nav_container {
+  /* Navigation container styling */
+  display: flex;
+  background-color: darkgray;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  font-size: 100%;
+
+
+}
+
+.nav_btn {
+  /* Navigation button styling */
+  width: 15vw;
+  height: 5vh;
+  padding-bottom: 10%;
+  cursor: pointer;
+  transition-duration: 1.0s;
+  background-color: rgb(255,255,255);
+  border: 6px black;
+  border-style: double;
+  font-size: 1.3vw;
+  font-family: courier;
+
+}
+
+.nav_btn:hover{
+  color: white;
+  background-color: black;
+  border-color:white;
+
+}
+ .Link_Button{
+  /* Styling for links in navigation */
+  margin:0.5%;
+  padding: 0%;
+  width: 15vw;
+  height: 5vh;
+  text-decoration: none;
+
+ }
+
+/*//////////////////////////////////////////////////////////////////////*/
+/* Slideshow Styling */
+.Slide_Image{
+  /* Styling for the slideshow */
+  width: 40vw;
+  height: 55vh;
+  padding-block: 15px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+
+.slideshow_box {
+  /* Styling for the slideshow */
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  margin: 10px;
+  justify-content: center;
+
+
+}
+
+
+.Slide_number {
+  /* Styling for the slideshow */
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 23px 27px;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+}
+
+
+.Slide_Indicator {
+  /* Styling for the slideshow */
+  height: 1%;
+  width: 1%;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  padding: 10px;
+  transition: background-color 0.6s ease;
+}
+
+.Slide_Indicator_Container {
+  /* Styling for the slideshow */
+  text-align:center;
+  padding:20px;
+}
+
+.active {
+  /* Slideshow indicator and fade animation styling */
+  background-color: black;
+}
+
+.fade {
+  /* Slideshow indicator and fade animation styling */
+  animation-name: fade;
+  animation-duration: 6.5s;
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/* Modal Styling */
+.login_modal {
+   /* Styling for login modal */
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.hidden{
+   /* Styling for login modal */
+  display: none;
+}
+
+.login_modal_content_container {
+   /* Styling for login modal */
+    background-color: #fff;
+    width: 25vw;
+    height: 90vh;
+    min-height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family:courier ;
+
+}
+
+.close {
+   /* Styling for login modal */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding-right: 10px;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.close:hover,.close:focus{
+   /* Styling for login modal */
+  color: red;
+  cursor: pointer;
+}
+
+.model_img_container{
+   /* Styling for login modal */
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.Login_img{
+   /* Styling for login modal */
+  width: 50%;
+  border-radius: 50%;
+}
+
+.username_password_container{
+   /* Styling for login modal */
+  padding: 5px;
+  margin: 5px 5px 5px 5px ;
+
+  height: 60%;
+}
+
+.Login_submit_button{
+   /* Styling for login modal */
+  width: 20vw;
+  margin: 30px 10px 10px 10px ;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(0,0,0);
+  border: 1px solid;
+  font-size: 2.5vh;
+  color: white;
+  border-radius: 25px;
+  font-family:courier ;
+}
+
+.Register_button{
+   /* Styling for login modal */
+  display: flex;
+  width: 10vh 5vw;
+  cursor: pointer;
+  background-color: rgb(0,0,0);
+  border: 1px solid;
+  color: white;
+  border-radius: 25px;
+  font-family:courier ;
+  top: 20px:;
+  left: 10px;
+  padding-left: 10px;
+  font-size: 2vh;
+  font-weight: bold;
+
+}
+
+
+
+.username_password_footer {
+   /* Styling for login modal footer */
+  padding: 1%;
+  font-size: 2vh;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+}
+
+.username_password_footer a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.hidden {
+   /* Styling for login modal */
+    display: none;
+}
+
+.Label p{
+   /* Styling for login modal */
+  margin: 10px;
+  font-size: 2.5vh;
+}
+
+
+input[type="username"] {
+   /* Styling for login modal */
+    padding: 10px;
+    border-radius: 25px;
+    width:20vw;
+    background-color: black;
+    color: white;
+    font-family:courier ;
+
+}
+input[type="password"] {
+   /* Styling for login modal */
+    padding: 10px;
+    border-radius: 25px;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    font-family:courier ;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/* Owl Carousel Styling */
+.owl-carousel{
+  /* Styling for Owl Carousel */
+    display: flex;
+    background-color: white;
+}
+
+.card_flipped {
+  /* Styling for Owlflipped card */
+  background-color: transparent;
+  width: 40vh;
+  height: 55vh;
+  font-family:courier ;
+}
+
+.item{ 
+    /* Styling for Owl Carousel flipped card item */           
+    width: 40vw ;
+    height: 55vh;
+    background-color: white;
+
+}
+
+.card_inside {
+  /* Styling for Owl Carousel flipped card item */ 
+  position: relative;
+  width: 40vh;
+  height: 55vh;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card_flipped:hover .card_inside {
+  /* Styling for Owl Carousel flipped card item */ 
+  transform: rotateY(180deg);
+}
+
+
+.card_flipped_front, .card_flipped_back {
+  /* Styling for Owl Carousel flipped card item */ 
+  position: absolute;
+  width: 40vh;
+  height: 55vh;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.card_flipped_back {
+  /* Styling for Owl Carousel flipped card item */ 
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.card_flipped_back p{
+  /* Styling for Owl Carousel flipped card item */ 
+  padding: 0.5vw;
+  margin: 0.5vw;
+  font-size: 2vh;
+}
+
+.card_flipped_back h2{
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  font-size: 3vh;
+
+}
+.card_flipped_back_button{
+  /* Styling for Owl Carousel flipped card button */ 
+  width: 15vw;
+  height: 5vh;
+  cursor: pointer;
+  transition-duration: 1.0s;
+  background-color: rgb(255,255,255);
+  border: 6px black;
+  border-style: double;
+  font-size: 2.5vh;
+  font-family: courier;
+
+}
+
+
+
+.fade-in-image { 
+  animation: fadeIn 10s; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/* Search Bar Styling */
+.flex_search_bar_container {
+  /* Styling for the search bar container */
+  display: flex;
+  justify-content: center;
+  background-color: rgb(4,4,4);
+  padding: 10px 10px;
+  margin: 10px 0 10px 0 ;
+
+}
+
+.search_bar {
+  /* Styling for the search bar */
+    display: flex;
+    align-items: left;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 60vw;
+    font-family: courier;
+}
+
+input[type="text"] {
+  /* Styling for the search bar */
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: courier;
+    width: 100vh;
+    flex-grow: 1;
+}
+
+.search_button {
+  /* Styling for the search bar */
+    background-color: darkgrey;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-size: 75%;
+    width: 10vw;
+    cursor: pointer;
+    font-family: courier;
+}
+/*//////////////////////////////////////////////////////////////////////*/
+/* Footer Styling */
+.Home_page_footer{
+  /* Styling for the footer */
+  display: flex;
+  width: auto;
+  height: 100%;
+  min-height: 300px;
+  min-width: 600px;
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  font-family:courier ;
+
+
+}
+
+.Footer_lists{
+  /* Styling for the footers */
+  display: flex;
+  height: 40vh;
+  min-height: 300px;
+  width: 100vw;
+  min-width: 550px;
+  background-color: black;
+  color: white;
+  font-family:courier ;
+
+
+}
+
+li,{
+  /* Styling for the footer */
+  color:white;
+  text-decoration: none;
+}
+
+.Footer_Links{
+  color: white;
+  padding: 1%;
+  font-size: 2vh;
+  text-decoration: none;
+
+}
+
+ul{
+  /* Styling for the footer  */
+  list-style-type: none;
+  margin-right: 1 vw;
+  margin-left: 1 vw;
+
+}
+
+.Social_media_logos{
+  /* Styling for the social media icons */
+  display: flex;
+  height: auto;
+  width: 10%;
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  font-size: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.fa {
+  /* Styling for the social media icons */
+  padding-top: 10px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.fa-facebook {
+  /* Styling for the social media icons */
+  background:white ;
+  color: black;
+}
+
+.fa-twitter {
+  /* Styling for the social media icons */
+  background: white;
+  color: black;
+}
+
+.fa-instagram {
+  /* Styling for the social media icons */
+  background: white;
+  color: black;
+}
+
+.Review_container{
+  /* Styling for the footer  */
+  display: flex;
+  height: 100%;
+  width: 50vw;
+  padding: 10px 10px 10px 10px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  font-family:courier ;
+  justify-content: center;
+}
+
+.Review_img{
+  /* Styling for the footer */
+  width: 35vw;
+  height:40vh;
+
+
+
+
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1500px) {
+  .Review_container {
+    display: none;
+  }
+
+  .Social_media_logos {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .Slide_Image{
+    width: 30vw;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .section_middle_container_text{
+    display: none;
+  }
+}
+
+  
+@media only screen and (max-width: 900px) {
+  .login_modal_content_container{
+    width:50%;
+    
+  }
+}
+
+/* This styling will apply to images with the class 'Login_img' inside both login and registration modals */
+.login_modal_content_container .Login_img,
+.register_modal_content_container .Login_img {
+    width: 50%;  /* Set the width to 50% of the parent container */
+    border-radius: 50%;  /* Makes the image circular */
+    /* Add any additional styles here */
+    display: block; /* Ensures the image is a block-level element */
+    margin: 0 auto; /* Centers the image horizontally within its container */
+}
+
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%; /* Full width within the parent container */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    border: none; /* Remove borders */
+    margin-bottom: 10px; /* Space between the fields */
+    font-family: courier;
+    -webkit-appearance: none; /* Remove browser-specific styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Focus styling for input fields */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+/* Register and Login button styling within the modal */
+.login_modal_content_container .Login_submit_button,
+.login_modal_content_container .Register_button {
+    width: 100%; /* Full width to match the input fields */
+    padding: 10px 0px; /* Padding for top and bottom */
+    margin: 10px 0px; /* Margin for top and bottom */
+    border-radius: 25px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-family: courier;
+    font-size: 2.5vh;
+    text-align: center; /* Center the text on buttons */
+    display: block; /* Make buttons block level for full width */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for buttons */
+.login_modal_content_container .Login_submit_button:hover,
+.login_modal_content_container .Register_button:hover {
+    background-color: #333; /* Slightly lighter black for hover state */
+}
+
+/* Checkbox and Forgot Password link styling */
+.login_modal_content_container .username_password_footer {
+    font-size: 2vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Space out checkbox and forgot password link */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Forgot Password link styling */
+.login_modal_content_container .username_password_footer .forgot_password_link {
+  text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 2vh;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for Forgot Password link */
+.login_modal_content_container .username_password_footer .forgot_password_link:hover {
+  color: #0096ff; /* Blue color on hover */
+}
+
+.login_modal_content_container .username_password_footer label {
+    display: block; /* Full width for the checkbox container */
+    margin-bottom: 10px; /* Space below the checkbox */
+}
+
+.login_modal_content_container .username_password_footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vh;
+    margin-bottom: 10px; /* Space below the forgot password link */
+    align-self: flex-end; /* Align forgot password to the right */
+}
+
+
+/* Registration Modal Styling */
+.register_modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+}
+
+.register_modal_content_container {
+  background-color: #fefefe;
+  margin: 15% auto; /* Position in the middle */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25vw; /* Same width as the login modal */
+  min-height: 70vh;
+  text-align: center;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Input Field Styling */
+.register_modal_content_container input[type="text"],
+.register_modal_content_container input[type="password"],
+.register_modal_content_container input[type="email"],
+.register_modal_content_container input[type="tel"] {
+  width: calc(100% - 40px); /* Full width minus padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Button Styling */
+.register_modal_content_container .Register_submit_button {
+  width: calc(100% - 40px); /* Make sure this matches the input fields' width calculation */
+  padding: 10px; /* Match input fields' padding */
+  margin-left: 17px;
+  margin-top: 20px; /* Adjust if more space is needed from the last input field */
+  margin-bottom: 0; /* Remove any bottom margin if not needed */
+  border-radius: 25px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5vh;
+  display: block;
+  text-align: center;
+}
+
+.register_modal_content_container .Register_submit_button:hover {
+  background-color: #333; /* Slightly lighter black for hover state */
+}
+
+/* Forgot Password and Remember Me Styling */
+.login_modal_content_container .username_password_footer {
+  font-size: 2vh;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Space out checkbox and forgot password link */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.login_modal_content_container .username_password_footer label {
+  display: block; /* Full width for the checkbox container */
+  margin-bottom: 10px; /* Space below the checkbox */
+}
+
+.login_modal_content_container .username_password_footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2vh;
+  margin-bottom: 10px; /* Space below the forgot password link */
+  align-self: flex-end; /* Align forgot password to the right */
+}
+
+/* Hover effect for Forgot Password link */
+.login_modal_content_container .username_password_footer a:hover {
+  color: #0096ff; /* Blue color on hover */
+}
+
+.logout_button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000; /* Add a high z-index to ensure visibility */
+}
+
+.header_icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Base styling for the carousel items */
+.item {
+  perspective: 1000px; /* Enable 3D perspective */
+}
+
+/* The flip card container - set the width and height of the flipping card */
+.card {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Styling for the front and back of the card */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side during the flip */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* Align items in a row for side-by-side layout */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Front side styling */
+.card-front {
+  background-color: #fff; /* Change as needed */
+}
+
+/* Back side styling */
+.card-back {
+  background-color: #f1f1f1; /* Change as needed */
+  transform: rotateY(180deg);
+  justify-content: flex-start; /* Align content to the start */
+  padding: 10px;
+}
+
+/* Flip effect on hover */
+.item:hover .card {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+/* Flexbox for side-by-side layout */
+.card.d-flex {
+  display: flex;
+}
+
+/* Container for the image */
+.card-image-container {
+  flex: 0 0 50%; /* Assigns flex-basis of 50% to the image container */
+  max-width: 50%; /* Ensures the image container does not exceed 50% of the card's width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the image */
+.card-img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Image will be scaled to maintain its aspect ratio while fitting within the element's content box */
+}
+
+/* Styling for the card text */
+.card-text {
+  overflow: hidden; /* Ensures the text does not overflow the card */
+  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+  padding: 0 10px; /* Adjust padding as needed */
+}
+
+/* Styling for the card title */
+.card-title {
+  font-size: 1em; /* Adjust font size as needed */
+  font-weight: bold;
+  height: 2em; /* Set a fixed height for the title */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px; /* Space between the title and description */
+}
+
+/* Styling for the card description */
+.card-description {
+  font-size: 0.9em; /* Adjust font size as needed */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px; /* Space between the description and price */
+}
+
+
+/* Styling for the card price */
+.card-price {
+  font-size: 1em; /* Adjust font size as needed */
+  font-weight: bold;
+  height: 1em; /* Set a fixed height for the price */
+  margin-top: 5px; /* Space above the price */
+}
+
+
+/* Styling for the 'Add to Cart' button */
+.add-to-cart-button {
+  padding: 10px 15px; /* Button padding */
+  font-size: 1em; /* Font size */
+  color: white; /* Text color */
+  background-color: #5cb85c; /* Background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor to indicate it's clickable */
+  margin-top: 10px; /* Space above the button */
+  transition: background-color 0.3s ease; /* Transition for a smooth color change */
+}
+
+/* Hover effect for the 'Add to Cart' button */
+.add-to-cart-button:hover {
+  background-color: #449d44; /* Darker shade on hover */
+}
+
+/* Contact Us Page Styles */
+.contact_us_container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact_us_container h1 {
+  margin-bottom: 20px;
+}
+
+.contact_us_container p {
+  margin-bottom: 30px;
+}
+
+.form_group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form_group input[type="text"],
+.form_group input[type="email"],
+.form_group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form_group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact_submit_button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact_submit_button:hover {
+  background-color: #333;
+}
+
+/* FAQ Section Styling */
+.faq-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.faq-section h1 {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.faq h2 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Adds space between each FAQ entry */
+}
+
+
+.orders-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.order {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.order-details {
+  margin-top: 10px;
+}
+
+.order-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.order-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.order-total {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.search-results {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.search-item span {
+  font-size: 14px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.perfume-details-img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.perfume-details h2, .perfume-details p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.perfume-details button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.perfume-details button:hover {
+  background-color: #0056b3;
+}
+
+.about-us-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-us-img {
+  max-width: 60%; /* Adjust the width as needed */
+  height: auto; /* This ensures the aspect ratio is maintained */
+  margin: 20px 0; /* Adds some space above and below the image */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
+.about-us-content {
+  text-align: left;
+  max-width: 800px; /* Adjust based on your design preference */
+  margin: auto; /* Centers the text block */
+  padding: 20px;
+}
+
+/* Additional responsive adjustments can be added if needed */
+@media (max-width: 768px) {
+  .about-us-img {
+      max-width: 90%; /* Larger width for smaller screens */
+  }
+}
+
+.careers-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.career-opportunities {
+  text-align: left;
+  max-width: 800px; /* Adjust based on your design preference */
+  margin: auto; /* Centers the content */
+  padding: 20px;
+}
+
+.career-list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.career-list li {
+  font-weight: bold;
+}
+
+.career-list p {
+  font-weight: normal;
+  margin-left: 20px; /* Indents the description for better hierarchy */
+}
+
+.affiliates-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.affiliate-details {
+  text-align: left;
+  max-width: 800px; /* Adjust based on your design preference */
+  margin: auto; /* Centers the content */
+  padding: 20px;
+}
+
+.affiliate-benefits,
+.affiliate-steps {
+  padding-left: 20px;
+}
+
+.affiliate-benefits li,
+.affiliate-steps li {
+  margin-bottom: 10px;
+}
+
+.student-discount-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.student-discount-section ul {
+  list-style-type: disc;
+  text-align: left;
+  display: inline-block; /* Ensures the list is centered */
+  margin: 0 auto; /* Centers the list */
+  padding-left: 20px; /* Adds padding to the list for better readability */
+}
+
+.section_left_button, .section_right_button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.section_left_button:hover, .section_right_button:hover {
+  background-color: #555;
+}
