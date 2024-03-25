@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate and Review Modal</title>
+    <link rel="stylesheet" href="Reviewstyles.css">
+</head>
+<body>
+
+<button id="open-modal-btn">Leave a Review</button>
+
+<div id="review-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Rate This Product</h2>
+    <div class="stars" id="stars">
+
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+
+    </div>
+    <h1>Leave a Review</h1>
+    <textarea id="review-text" placeholder="Write your review here..."></textarea>
+    <button id="submit-review">Submit</button>
+    <div id="previous-reviews">
+      <h2>Previous Reviews</h2>
+      <ul id="reviews-list"></ul>
+    </div>
+  </div>
+
+</div>
+
+<script src="Reviewscript.js"></script>
+
+</body>
+</html>
